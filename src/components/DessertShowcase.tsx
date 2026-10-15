@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useBakery } from '../context/BakeryContext';
 import { Dessert } from '../types/bakery';
+import { BakeryImage } from './BakeryImage';
 import { Star, Plus, Eye, Search, Sparkles, ChevronLeft, ChevronRight, LayoutGrid, SlidersHorizontal } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -249,10 +250,10 @@ export const DessertShowcase: React.FC = () => {
                 >
                   {/* Image Container: 65-70% visual focus */}
                   <div className="relative aspect-[4/3] bg-stone-100 overflow-hidden">
-                    <img
+                    <BakeryImage
                       src={dessert.imageUrl}
+                      itemId={dessert.id}
                       alt={dessert.name}
-                      referrerPolicy="no-referrer"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
 

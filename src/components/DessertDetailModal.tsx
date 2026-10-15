@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useBakery } from '../context/BakeryContext';
 import { Dessert } from '../types/bakery';
-import { X, Star, ThumbsUp, Check, ShieldCheck, Plus, Minus, ShoppingBag, Sparkles } from 'lucide-react';
+import { BakeryImage } from './BakeryImage';
+import { X, Star, ThumbsUp, Check, ShieldCheck, Plus, Minus, ShoppingBag } from 'lucide-react';
 
 interface Props {
   dessert: Dessert;
@@ -9,7 +10,7 @@ interface Props {
 }
 
 export const DessertDetailModal: React.FC<Props> = ({ dessert, onClose }) => {
-  const { reviews, addReview, voteHelpful, getDessertStats, addToCart, setActiveView } = useBakery();
+  const { reviews, addReview, voteHelpful, getDessertStats, addToCart } = useBakery();
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState<'details' | 'reviews'>('details');
 
@@ -80,10 +81,10 @@ export const DessertDetailModal: React.FC<Props> = ({ dessert, onClose }) => {
         <div className="grid grid-cols-1 md:grid-cols-12 max-h-[85vh] overflow-y-auto">
           {/* Left Column: Visual Artwork */}
           <div className="md:col-span-5 bg-stone-100 relative min-h-[280px] md:min-h-full">
-            <img
+            <BakeryImage
               src={dessert.imageUrl}
+              itemId={dessert.id}
               alt={dessert.name}
-              referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent pointer-events-none" />
@@ -432,18 +433,6 @@ export const DessertDetailModal: React.FC<Props> = ({ dessert, onClose }) => {
                   <Plus className="w-3.5 h-3.5" />
                 </button>
               </div>
-
-              <button
-                onClick={() => {
-                  onClose();
-                  setActiveView('3d-atelier');
-                }}
-                className="py-3 px-3.5 border border-[#C5A059] bg-[#FAF7F2] text-[#9E7D3B] hover:bg-[#C5A059] hover:text-stone-900 text-xs font-semibold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs shrink-0"
-                title="Inspect in 3D interactive atelier"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
-                <span className="hidden sm:inline">3D View</span>
-              </button>
 
               <button
                 onClick={handleAddToCart}

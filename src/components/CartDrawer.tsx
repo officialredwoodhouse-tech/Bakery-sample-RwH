@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useBakery } from '../context/BakeryContext';
+import { BakeryImage } from './BakeryImage';
 import { X, Trash2, Plus, Minus, CheckCircle, ShoppingBag, ArrowRight } from 'lucide-react';
 
 export const CartDrawer: React.FC = () => {
@@ -146,8 +147,9 @@ export const CartDrawer: React.FC = () => {
                     <div key={item.id} className="pt-3 first:pt-0 flex items-start justify-between gap-3 text-xs">
                       <div className="flex gap-3">
                         {item.imageUrl && (
-                          <img
+                          <BakeryImage
                             src={item.imageUrl}
+                            itemId={item.dessertId}
                             alt={item.dessertName}
                             className="w-14 h-14 object-cover border border-[#E8E2D8] shrink-0"
                           />

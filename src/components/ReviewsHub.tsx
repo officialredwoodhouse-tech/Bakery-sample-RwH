@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useBakery } from '../context/BakeryContext';
+import { BakeryImage } from './BakeryImage';
 import { Star, ThumbsUp, ShieldCheck, Filter, Plus, MessageSquare } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -208,8 +209,9 @@ export const ReviewsHub: React.FC = () => {
                       onClick={() => setSelectedDessertModal(dessert)}
                       className="flex items-center gap-2 cursor-pointer group pb-2 border-b border-[#E8E2D8]"
                     >
-                      <img
+                      <BakeryImage
                         src={dessert.imageUrl}
+                        itemId={dessert.id}
                         alt={dessert.name}
                         className="w-8 h-8 object-cover border border-[#E8E2D8]"
                       />

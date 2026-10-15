@@ -1,7 +1,16 @@
 import { Dessert, Review, SeatingZone } from '../types/bakery';
 
-export const HERO_IMAGE = '/src/assets/images/hero_patisserie_showcase_1791988925520.jpg';
-export const ATELIER_IMAGE = '/src/assets/images/bakery_atelier_craft_1791988927604.jpg';
+import heroImg from '../assets/images/hero_patisserie_showcase_1791988925520.jpg';
+import atelierImg from '../assets/images/bakery_atelier_craft_1791988927604.jpg';
+import framboiseImg from '../assets/images/dessert_framboise_entremet_1791988925689.jpg';
+import operaImg from '../assets/images/dessert_opera_gateau_1791988926452.jpg';
+import saintHonoreImg from '../assets/images/dessert_saint_honore_1791988926963.jpg';
+
+export const HERO_IMAGE = heroImg;
+export const ATELIER_IMAGE = atelierImg;
+export const FRAMBOISE_IMAGE = framboiseImg;
+export const OPERA_IMAGE = operaImg;
+export const SAINT_HONORE_IMAGE = saintHonoreImg;
 
 export const INITIAL_DESSERTS: Dessert[] = [
   {
@@ -15,7 +24,7 @@ export const INITIAL_DESSERTS: Dessert[] = [
     tastingNotes: ['Tart Rhône raspberries', 'Bourbon vanilla bean', 'Toasted almond sablé', 'Floral hibiscus notes'],
     allergens: ['Dairy', 'Gluten', 'Eggs', 'Tree Nuts (Almonds)'],
     dietary: ['Vegetarian'],
-    imageUrl: '/src/assets/images/dessert_framboise_entremet_1791988925689.jpg',
+    imageUrl: framboiseImg,
     featured: true,
     servingSize: 'Individual entremet (serves 1)',
     leadTimeHours: 24,
@@ -31,7 +40,7 @@ export const INITIAL_DESSERTS: Dessert[] = [
     tastingNotes: ['Bittersweet Valrhona 70%', 'Roasted Arabica notes', 'Almond Joconde', 'Caramelized cocoa nibs'],
     allergens: ['Dairy', 'Gluten', 'Eggs', 'Tree Nuts (Almonds)'],
     dietary: ['Vegetarian'],
-    imageUrl: '/src/assets/images/dessert_opera_gateau_1791988926452.jpg',
+    imageUrl: operaImg,
     featured: true,
     servingSize: 'Individual portion (serves 1)',
     leadTimeHours: 24,
@@ -47,7 +56,7 @@ export const INITIAL_DESSERTS: Dessert[] = [
     tastingNotes: ['Crackle caramel crunch', 'Double vanilla bean infusion', 'Buttery flaky feuilletage', 'Light salted cream'],
     allergens: ['Dairy', 'Gluten', 'Eggs'],
     dietary: ['Vegetarian'],
-    imageUrl: '/src/assets/images/dessert_saint_honore_1791988926963.jpg',
+    imageUrl: saintHonoreImg,
     featured: true,
     servingSize: 'Individual presentation (serves 1)',
     leadTimeHours: 12,
@@ -63,7 +72,7 @@ export const INITIAL_DESSERTS: Dessert[] = [
     tastingNotes: ['Roasted Piedmont hazelnut', 'Fleur de sel crunch', 'Aerated choux', 'Caramelized almond flakes'],
     allergens: ['Dairy', 'Gluten', 'Eggs', 'Tree Nuts (Hazelnuts, Almonds)'],
     dietary: ['Vegetarian'],
-    imageUrl: '/src/assets/images/dessert_opera_gateau_1791988926452.jpg',
+    imageUrl: operaImg,
     featured: false,
     servingSize: 'Individual pastry (serves 1)',
     leadTimeHours: 12,
@@ -79,7 +88,7 @@ export const INITIAL_DESSERTS: Dessert[] = [
     tastingNotes: ['Cultured butter richness', 'Honeycomb aeration', 'Subtle sourdough tang', 'Caramelized flake exterior'],
     allergens: ['Dairy', 'Gluten', 'Eggs'],
     dietary: ['Vegetarian'],
-    imageUrl: '/src/assets/images/hero_patisserie_showcase_1791988925520.jpg',
+    imageUrl: heroImg,
     featured: true,
     servingSize: '1 piece',
     leadTimeHours: 4,
@@ -95,7 +104,7 @@ export const INITIAL_DESSERTS: Dessert[] = [
     tastingNotes: ['Zesty Menton lemon', 'Aromatic Japanese yuzu', 'Silk meringue softness', 'Crisp butter sablé'],
     allergens: ['Dairy', 'Gluten', 'Eggs'],
     dietary: ['Vegetarian'],
-    imageUrl: '/src/assets/images/dessert_saint_honore_1791988926963.jpg',
+    imageUrl: saintHonoreImg,
     featured: false,
     servingSize: 'Individual tartelette (serves 1)',
     leadTimeHours: 12,
@@ -111,7 +120,7 @@ export const INITIAL_DESSERTS: Dessert[] = [
     tastingNotes: ['Delicate almond shell', 'Rich natural fruit purées', 'Velvety grand cru ganache', 'Floral infusions'],
     allergens: ['Dairy', 'Eggs', 'Tree Nuts (Almonds, Pistachios)'],
     dietary: ['Vegetarian', 'Gluten-Conscious'],
-    imageUrl: '/src/assets/images/dessert_framboise_entremet_1791988925689.jpg',
+    imageUrl: framboiseImg,
     featured: true,
     servingSize: 'Box of 8 pieces',
     leadTimeHours: 12,
@@ -127,7 +136,7 @@ export const INITIAL_DESSERTS: Dessert[] = [
     tastingNotes: ['Bittersweet molten chocolate', 'Nutty gianduja', 'Caramelized flake', 'Warm cultured dairy'],
     allergens: ['Dairy', 'Gluten', 'Eggs', 'Tree Nuts (Hazelnuts)'],
     dietary: ['Vegetarian'],
-    imageUrl: '/src/assets/images/hero_patisserie_showcase_1791988925520.jpg',
+    imageUrl: heroImg,
     featured: false,
     servingSize: '1 piece',
     leadTimeHours: 4,

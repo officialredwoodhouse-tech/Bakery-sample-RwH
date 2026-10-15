@@ -1,6 +1,7 @@
 import React from 'react';
 import { useBakery } from '../context/BakeryContext';
 import { HERO_IMAGE } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 import { ArrowRight, Calendar, Star, Clock, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -90,10 +91,11 @@ export const HeroSection: React.FC = () => {
             className="lg:col-span-5 relative"
           >
             <div className="relative aspect-[4/3] lg:aspect-[5/4] overflow-hidden rounded-sm shadow-md bg-stone-200 border border-[#E8E2D8] flex items-center justify-center">
-              <img
+              <BakeryImage
                 src={HERO_IMAGE}
+                fallbackSrc="/images/hero.jpg"
+                itemId="hero"
                 alt="Maison Élysée boutique interior showcasing dessert cloches and marble display"
-                referrerPolicy="no-referrer"
                 style={{ height: '226.201px', width: '311.442px' }}
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />

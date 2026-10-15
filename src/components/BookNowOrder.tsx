@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useBakery } from '../context/BakeryContext';
+import { FRAMBOISE_IMAGE } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 import { Gift, Check, Plus, Minus, ArrowRight, ShieldCheck, Sparkles, Clock } from 'lucide-react';
 
 export const BookNowOrder: React.FC = () => {
@@ -59,7 +61,7 @@ export const BookNowOrder: React.FC = () => {
       boxItems: itemsList,
       boxSize,
       customInscription: giftCardNote.trim() || undefined,
-      imageUrl: '/src/assets/images/dessert_framboise_entremet_1791988925689.jpg',
+      imageUrl: FRAMBOISE_IMAGE,
     });
     setIsCartOpen(true);
   };
@@ -214,8 +216,9 @@ export const BookNowOrder: React.FC = () => {
                       className="p-3.5 border border-[#E8E2D8] flex items-center justify-between gap-3 bg-[#FAF7F2]"
                     >
                       <div className="flex items-center gap-3">
-                        <img
+                        <BakeryImage
                           src={dessert.imageUrl}
+                          itemId={dessert.id}
                           alt={dessert.name}
                           className="w-12 h-12 object-cover border border-[#E8E2D8]"
                         />
@@ -375,8 +378,9 @@ export const BookNowOrder: React.FC = () => {
                   >
                     <div>
                       <div className="aspect-[4/3] bg-stone-100 mb-3 overflow-hidden">
-                        <img
+                        <BakeryImage
                           src={cake.imageUrl}
+                          itemId={cake.id}
                           alt={cake.name}
                           className="w-full h-full object-cover"
                         />

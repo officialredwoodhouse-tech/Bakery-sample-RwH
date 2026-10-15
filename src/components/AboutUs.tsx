@@ -1,6 +1,7 @@
 import React from 'react';
 import { useBakery } from '../context/BakeryContext';
-import { ATELIER_IMAGE } from '../data/bakeryData';
+import { HERO_IMAGE, ATELIER_IMAGE } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 import { Feather, Clock, Heart } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -59,10 +60,11 @@ export const AboutUs: React.FC = () => {
           </div>
 
           <div className="relative aspect-[4/3] bg-stone-100 overflow-hidden border border-[#E8E2D8] shadow-sm">
-            <img
-              src="/src/assets/images/hero_patisserie_showcase_1791988925520.jpg"
+            <BakeryImage
+              src={HERO_IMAGE}
+              fallbackSrc="/images/hero.jpg"
+              itemId="hero"
               alt="Historical salon atmosphere of Maison Élysée"
-              referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-stone-950/20" />
@@ -143,10 +145,11 @@ export const AboutUs: React.FC = () => {
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6 relative aspect-[16/10] overflow-hidden rounded-sm border border-[#E8E2D8] shadow-md">
-            <img
+            <BakeryImage
               src={ATELIER_IMAGE}
+              fallbackSrc="/images/atelier.jpg"
+              itemId="atelier"
               alt="Master chef piping fruit tarts in the atelier"
-              referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-stone-950/15" />
