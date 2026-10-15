@@ -1,0 +1,6 @@
+{
+  "name": "Maison Élysée — Haute Pâtisserie & Salon",
+  "description": "Artisanal Parisian luxury bakery showcasing handcrafted elegant desserts, dining room table reservations, bespoke pastry pre-orders, and genuine customer reviews.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
