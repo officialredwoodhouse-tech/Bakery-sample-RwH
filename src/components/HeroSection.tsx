@@ -96,7 +96,7 @@ export const HeroSection: React.FC = () => {
                 fallbackSrc="/images/hero.jpg"
                 itemId="hero"
                 alt="Maison Élysée boutique interior showcasing dessert cloches and marble display"
-                style={{ height: '226.201px', width: '311.442px' }}
+                style={{ height: '341.182px', width: '419.423px' }}
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-stone-950/10 to-transparent pointer-events-none" />
